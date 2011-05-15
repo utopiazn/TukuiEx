@@ -81,8 +81,7 @@ local function SkinTab(tab)
 	-- always set tab text centered
 	local name = tab:GetName()
 	_G[name.."Text"]:ClearAllPoints()
-	_G[name.."Text"]:SetPoint("CENTER")
-	_G[name.."Text"].SetPoint = T.dummy
+	_G[name.."Text"]:SetPoint("TOP", name, 0, -11)
 end
 
 local function SkinNextPrevButton(btn, horizonal)
