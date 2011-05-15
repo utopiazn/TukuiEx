@@ -6,6 +6,11 @@
 local T, C, L = unpack(select(2, ...))
 local panel_height = ((T.Scale(5)*4) + (T.Scale(22)*4))
 local r,g,b = C["media"].backdropcolor
+local anchor = TukuiMinimapStatsRight
+
+if C["buffreminder"].raidbuffreminder == true then
+	anchor = TukuiRaidBuffReminder
+end
 
 local function CreateUtilities(self, event, addon)
 	if addon == "Tukui_Raid_Healing" or addon == "Tukui_Raid" then
@@ -14,7 +19,7 @@ local function CreateUtilities(self, event, addon)
 
 		--Create main frame
 		local TukuiRaidUtility = CreateFrame("Frame", "TukuiRaidUtility", UIParent)
-		TukuiRaidUtility:CreatePanel("Default", TukuiMinimap:GetWidth(), panel_height, "TOPRIGHT", TukuiRaidBuffReminder, "BOTTOMRIGHT", 0, -2)
+		TukuiRaidUtility:CreatePanel("Default", TukuiMinimap:GetWidth(), panel_height, "TOPRIGHT", anchor, "BOTTOMRIGHT", 0, -2)
 		TukuiRaidUtility:Hide()
 
 		--Check if We are Raid Leader or Raid Officer
@@ -64,7 +69,7 @@ local function CreateUtilities(self, event, addon)
 		end
 
 		--Show Button
-		CreateButton("TukuiRaidUtilityShowButton", UIParent, "UIMenuButtonStretchTemplate, SecureHandlerClickTemplate", TukuiMinimap:GetWidth(), 21, "TOPRIGHT", TukuiRaidBuffReminder, "BOTTOMRIGHT", 0, -2, L.raidutil_show, nil)
+		CreateButton("TukuiRaidUtilityShowButton", UIParent, "UIMenuButtonStretchTemplate, SecureHandlerClickTemplate", TukuiMinimap:GetWidth(), 21, "TOPRIGHT", anchor, "BOTTOMRIGHT", 0, -2, L.raidutil_show, nil)
 		TukuiRaidUtilityShowButton:SetFrameRef("TukuiRaidUtility", TukuiRaidUtility)
 		TukuiRaidUtilityShowButton:SetAttribute("_onclick", [=[self:Hide(); self:GetFrameRef("TukuiRaidUtility"):Show();]=])
 		TukuiRaidUtilityShowButton:SetScript("OnMouseUp", function(self) TukuiRaidUtility.toggled = true end)
