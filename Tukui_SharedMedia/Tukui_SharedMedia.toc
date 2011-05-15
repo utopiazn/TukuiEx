@@ -1,0 +1,10 @@
+﻿## Interface: 40100
+## Author: 달빛야수 @ Ragnaros (KR)
+## Version: 3.1
+## Title: |cffC495DDTukui|r SharedMedia
+## Notes: AddOns Skins for Tukui.
+## Notes-koKR: Tukui를 위한 애드온 스킨입니다.
+## RequiredDeps: Tukui
+## OptionalDeps: ArkInventory, Recount, QBar, Omen, SexyCooldown, Skada, Quartz
+
+Tukui_SharedMedia.xml

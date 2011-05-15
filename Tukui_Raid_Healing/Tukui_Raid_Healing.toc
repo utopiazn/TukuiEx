@@ -1,0 +1,14 @@
+﻿## Interface: 40100
+## Author: Tukz
+## Editor: 달빛야수 @ Ragnaros (KR)
+## Title: |cffC495DDTukui Raid|r for healers
+## Title-koKR: |cffC495DDTukui 공격대창|r 치유 담당
+## Notes: Raid layout for party and raid, Healer mode.
+## Notes-koKR: 치유 담당 공격대창.
+## X-Email: tukz@tukui.org
+## X-Category: UnitFrame
+## RequiredDeps: Tukui
+
+oUF_hTukz_AuraWatch.lua
+oUF_hTukz_Raid01_15.lua
+oUF_hTukz_Raid16_40.lua

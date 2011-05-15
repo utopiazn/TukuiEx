@@ -1,0 +1,13 @@
+﻿## Interface: 40100
+## Author: Tukz
+## Editor: 달빛야수 @ Ragnaros (KR)
+## Title: |cffC495DDTukui Raid|r
+## Title-koKR: |cffC495DDTukui 공격대창|r
+## Notes: Raid layout for party and raid, DPS/Tank mode.
+## Notes-koKR: 공격/방어 담당 공격대창.
+## X-Email: tukz@tukui.org
+## X-Category: UnitFrame
+## RequiredDeps: Tukui
+
+oUF_Tukz_Raid01_25.lua
+oUF_Tukz_Raid40.lua
