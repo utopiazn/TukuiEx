@@ -1,4 +1,5 @@
 local T, C, L = unpack(select(2, ...))
+if C["panels"].blizzardskins ~= true then return end
 
 local FONT = C["media"].font
 local FONTSIZE = 18

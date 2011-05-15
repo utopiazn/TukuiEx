@@ -5,11 +5,11 @@
 
 	-- general
 	TukuiL.option_general = "일반"
-	TukuiL.option_general_uiscale = "자동 UI 크기"
+	TukuiL.option_general_uiscale = "자동 인터페이스 크기"
 	TukuiL.option_general_override = "저해상도에서 고해상도 버전 화면배열 사용"
 	TukuiL.option_general_overridelow = "고해상도에서 저해상도 버전 화면배열 사용"
 	TukuiL.option_general_multisample = "멀티샘플링 1배 유지 (깨끗한 1px 선)"
-	TukuiL.option_general_customuiscale = "UI 크기 (자동 UI 크기를 사용하지 않는다면)"
+	TukuiL.option_general_customuiscale = "인터페이스 크기 (자동 인터페이스 크기를 사용하지 않는다면)"
 	TukuiL.option_general_classcolor = "직업 색상 사용"
 	TukuiL.option_general_backdropcolor = "기본 배경 색상"
 	TukuiL.option_general_bordercolor = "기본 선 색상"
@@ -193,6 +193,7 @@
 	TukuiL.option_panels_bottompanel = "하단 배경창"
 	TukuiL.option_panels_toppanel = "상단 배경창"
 	TukuiL.option_panels_location = "상단 지역정보"
+	TukuiL.option_panels_blizzardskins = "블리자드 인터페이스 스킨"
 
 	-- misc
 	TukuiL.option_misc = "기타"

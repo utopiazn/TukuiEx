@@ -226,6 +226,7 @@ local function Local(o)
 	if o == "TukuiConfigUIpanelsbottompanel" then o = TukuiL.option_panels_bottompanel end
 	if o == "TukuiConfigUIpanelstoppanel" then o = TukuiL.option_panels_toppanel end
 	if o == "TukuiConfigUIpanelslocation" then o = TukuiL.option_panels_location end
+	if o == "TukuiConfigUIpanelsblizzardskins" then o = TukuiL.option_panels_blizzardskins end
 
 	-- misc
 	if o == "TukuiConfigUImisc" then o = TukuiL.option_misc end
