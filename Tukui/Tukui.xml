@@ -119,7 +119,6 @@
 	<Script file="modules\misc\altpowerbar.lua"/>
 	<Script file="modules\misc\threatbar.lua"/>
 	<Script file="modules\misc\raidmarker.lua"/>
-	<Script file="modules\misc\mail.lua"/>
 	<Script file="modules\blizzard\achievements.lua"/>
 	<Script file="modules\blizzard\colorpicker.lua"/>
 	<Script file="core\movers.lua"/>
