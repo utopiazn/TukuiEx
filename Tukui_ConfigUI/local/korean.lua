@@ -98,7 +98,7 @@
 	TukuiL.option_raidframes_mainassist = "지원공격 전담창"
 	TukuiL.option_raidframes_role = "공격대원 역할 표시"
 	TukuiL.option_raidframes_boss = "우두머리창"
-	TukuiL.option_raidframes_showperpw = "우두머리 기력 백분율 표시"
+	TukuiL.option_raidframes_showperpw = "우두머리창 기력 백분율 표시"
 
 	-- castbar
 	TukuiL.option_castbar = "시전바"
@@ -181,9 +181,9 @@
 	TukuiL.option_auras_focusdebuff = "주시대상창에 약화 효과 표시"
 	TukuiL.option_auras_bossdebuff = "우두머리 개체창에 약화 효과 표시"
 	TukuiL.option_auras_arenadebuff = "투기장 상대 플레이어창에 약화 효과 표시"
-	TukuiL.option_auras_buffrows = "플레이어, 대상창 강화 효과 줄의 수"
-	TukuiL.option_auras_debuffrows = "플레이어, 대상창 약화 효과 줄의 수"
-	TukuiL.option_auras_debuffnums = "주시대상, 우두머리, 투기장 상대 플레이어창 약화 효과 개수"
+	TukuiL.option_auras_buffrows = "플레이어창, 대상창 강화 효과 줄의 수"
+	TukuiL.option_auras_debuffrows = "플레이어창, 대상창 약화 효과 줄의 수"
+	TukuiL.option_auras_debuffnums = "주시대상창, 우두머리창, 투기장 상대 플레이어창 약화 효과 개수"
 	TukuiL.option_auras_totdebuffs = "대상의 대상의 약화 효과 표시 (고해상도)"
 	TukuiL.option_auras_onlyselfdebuffs = "대상창에 자신의 약화 효과만 표시"
 
@@ -192,7 +192,7 @@
 	TukuiL.option_panels_infowidth = "정보창 너비"
 	TukuiL.option_panels_bottompanel = "하단 배경창"
 	TukuiL.option_panels_toppanel = "상단 배경창"
-	TukuiL.option_panels_location = "상단 지역정보"
+	TukuiL.option_panels_location = "상단 지역정보창"
 	TukuiL.option_panels_blizzardskins = "블리자드 인터페이스 스킨"
 
 	-- misc
