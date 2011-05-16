@@ -168,11 +168,6 @@ L.bags_bids = "Using bags: "
 L.bags_stackend = "Restacking finished."
 L.bags_rightclick_search = "Right-click to search."
 
-L.mail_message = "Posts"
-L.mail_needmailbox = "Need a mainbox."
-L.mail_complete = "Complete."
-L.mail_invfull = "Inventory is full."
-
 L.time_day = "D"
 L.time_hour = "H"
 L.time_minute = "M"
@@ -185,8 +180,10 @@ L.autoinv_invite = "invite"
 
 L.chat_invalidtarget = "Invalid Target"
 
+L.colorpicker_warning = "Disable ColorPickerPlus AddOn, |cffC495DDTukui|r includes the same functionality, type '/disable ColorPickerPlus'"
+
 L.core_title = "|cffC495DDTukui|r |cffff8000Extended Edition|r"
-L.core_tukui = "|cffC495DDTukui:|r "
+L.core_prefix = "|cffC495DDTukui:|r "
 L.core_website = "|cff16FF5Dcafe.naver.com/tukui|r"
 L.core_addonnotfound = "|cffff0000Error, Addon not found.|r"
 

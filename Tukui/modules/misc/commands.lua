@@ -1,12 +1,12 @@
 ﻿local T, C, L = unpack(select(2, ...)) -- Import: T - functions, constants, variables; C - config; L - locales
 
 -- enable or disable an addon via command
-SlashCmdList.DISABLE_ADDON = function(addon) local _, _, _, _, _, reason, _ = GetAddOnInfo(addon) if reason ~= "MISSING" then DisableAddOn(addon) ReloadUI() else print(L.core_addonnotfound) end end
+SlashCmdList.DISABLE_ADDON = function(addon) local _, _, _, _, _, reason, _ = GetAddOnInfo(addon) if reason ~= "MISSING" then DisableAddOn(addon) ReloadUI() else print(L.core_prefix..L.core_addonnotfound) end end
 SLASH_DISABLE_ADDON1 = "/disable"
 SLASH_DISABLE_ADDON2 = "/비활성화"
 SLASH_DISABLE_ADDON3 = "/끄기"
 SLASH_DISABLE_ADDON4 = "/얀뮤ㅣㄷ"
-SlashCmdList.ENABLE_ADDON = function(addon) local _, _, _, _, _, reason, _ = GetAddOnInfo(addon) if reason ~= "MISSING" then EnableAddOn(addon) LoadAddOn(addon) ReloadUI() else print(L.core_addonnotfound) end end
+SlashCmdList.ENABLE_ADDON = function(addon) local _, _, _, _, _, reason, _ = GetAddOnInfo(addon) if reason ~= "MISSING" then EnableAddOn(addon) LoadAddOn(addon) ReloadUI() else print(L.core_prefix..L.core_addonnotfound) end end
 SLASH_ENABLE_ADDON1 = "/enable"
 SLASH_ENABLE_ADDON2 = "/활성화"
 SLASH_ENABLE_ADDON3 = "/켜기"

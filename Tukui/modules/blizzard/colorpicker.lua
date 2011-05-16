@@ -134,7 +134,7 @@ load:SetScript("OnEvent", function(self, event)
 	self:UnregisterAllEvents()
 
 	if IsAddOnLoaded("ColorPickerPlus") then
-		print(L.colorpicker_warning)
+		print(L.core_prefix..L.colorpicker_warning)
 		return
 	end
 	

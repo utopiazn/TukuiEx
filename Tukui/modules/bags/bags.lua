@@ -39,7 +39,7 @@ local Loc = setmetatable({}, {
 
 
 local function Print (x)
-	DEFAULT_CHAT_FRAME:AddMessage(L.core_tukui .. x)
+	DEFAULT_CHAT_FRAME:AddMessage(L.core_prefix .. x)
 end
 
 local function Stuffing_Sort(args)

@@ -65,14 +65,14 @@ end)
 function SlashCmdList.AUTOINVITE(msg, editbox)
 	if (msg == "off") or (msg == "끄기") or (msg == "비활성화") then
 		ainvenabled = false
-		print(L.autoinv_disable)
+		print(L.core_prefix..L.autoinv_disable)
 	elseif msg == "" then
 		ainvenabled = true
-		print(L.autoinv_enable)
+		print(L.core_prefix..L.autoinv_enable)
 		ainvkeyword = L.autoinv_invite
 	else
 		ainvenabled = true
-		print(L.autoinv_enable_c .. msg)
+		print(L.core_prefix..L.autoinv_enable_c..msg)
 		ainvkeyword = msg
 	end
 end

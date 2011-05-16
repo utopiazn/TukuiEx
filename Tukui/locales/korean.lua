@@ -167,12 +167,7 @@ if T.client == "koKR" then
 	L.bags_bids = "사용 중인 가방: "
 	L.bags_stackend = "재정리 완료."
 	L.bags_rightclick_search = "검색하려면 오른쪽 클릭"
-	
-	L.mail_message = "통의 편지"
-	L.mail_needmailbox = "우체통 근처에 있어야 합니다."
-	L.mail_complete = "모든 편지를 열어보았습니다."
-	L.mail_invfull = "가방이 꽉 찼습니다."
-	
+
 	L.time_day = "일"
 	L.time_hour = "시간"
 	L.time_minute = "분"
@@ -185,8 +180,10 @@ if T.client == "koKR" then
  
 	L.chat_invalidtarget = "잘못된 대상"
 	
+	L.colorpicker_warning = "/disable ColorPickerPlus 명령어를 입력하여 ColorPickerPlus 애드온을 비활성화 하십시오. |cffC495DDTukui|r에 같은 기능이 존재합니다."
+	
 	L.core_title = "|cffC495DDTukui|r |cffff8000Extended Edition|r"
-	L.core_tukui = "|cffC495DDTukui:|r "
+	L.core_prefix = "|cffC495DDTukui:|r "
 	L.core_website = "|cff16FF5Dcafe.naver.com/tukui|r"	
 	L.core_addonnotfound = "|cffff0000오류, 애드온을 찾을 수 없습니다.|r"
 	
@@ -210,16 +207,16 @@ if T.client == "koKR" then
 	L.bind_save = "저장"
 	L.bind_discardbind = "취소"
 	
-	L.move_tooltip = "툴팁 이동"
-	L.move_minimap = "미니맵 이동"
-	L.move_watchframe = "임무 추적창 이동"
-	L.move_gmframe = "대기표 이동"
-	L.move_buffs = "플레이어 강화 효과 이동"
-	L.move_debuffs = "플레이어 약화 효과 이동"
-	L.move_shapeshift = "특수 기술 단축바 이동"
-	L.move_achievements = "업적창 이동"
-	L.move_roll = "전리품 주사위창 이동"
-	L.move_vehicle = "탈것 자리 표시기 이동"
+	L.move_tooltip = "툴팁"
+	L.move_minimap = "미니맵"
+	L.move_watchframe = "임무 추적창"
+	L.move_gmframe = "대기표"
+	L.move_buffs = "플레이어 강화 효과"
+	L.move_debuffs = "플레이어 약화 효과"
+	L.move_shapeshift = "특수 기술 단축바"
+	L.move_achievements = "업적창"
+	L.move_roll = "전리품 주사위창"
+	L.move_vehicle = "탈것 자리 표시기"
 	L.move_playercastbar = "플레이어 시전바"
 	L.move_targetcastbar = "대상 시전바"
 	L.move_focuscastbar = "주시대상 시전바"

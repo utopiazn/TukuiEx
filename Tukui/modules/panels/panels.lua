@@ -138,7 +138,7 @@ ileft:SetFrameStrata("BACKGROUND")
 				TukuiConfigUI:Hide()
 			end
 		else
-			print(L.core_tukui..L.core_addonnotfound)
+			print(L.core_prefix..L.core_addonnotfound)
 		end
 	end)
 	ileftb:SetScript("OnEnter", function()

@@ -38,7 +38,7 @@ f:SetScript("OnEvent", function()
 		end
 		if c>0 then
 			local g, s, c = math.floor(c/10000) or 0, math.floor((c%10000)/100) or 0, c%100
-			DEFAULT_CHAT_FRAME:AddMessage(L.core_tukui..L.merchant_trashsell.." |cffffffff"..g..L.goldabbrev.." |cffffffff"..s..L.silverabbrev.." |cffffffff"..c..L.copperabbrev..".",255,255,0)
+			DEFAULT_CHAT_FRAME:AddMessage(L.core_prefix..L.merchant_trashsell.." |cffffffff"..g..L.goldabbrev.." |cffffffff"..s..L.silverabbrev.." |cffffffff"..c..L.copperabbrev..".",255,255,255)
 		end
 	end
 	if not IsShiftKeyDown() then
@@ -57,12 +57,12 @@ f:SetScript("OnEvent", function()
 					local s = math.floor((cost%10000)/100)
 					local g = math.floor(cost/10000)
 					if guildRepairFlag == 1 then
-						DEFAULT_CHAT_FRAME:AddMessage(L.core_tukui..L.merchant_repaircost.." ("..L.merchant_guild..") |cffffffff"..g..L.goldabbrev.." |cffffffff"..s..L.silverabbrev.." |cffffffff"..c..L.copperabbrev..".",255,255,0)
+						DEFAULT_CHAT_FRAME:AddMessage(L.core_prefix..L.merchant_repaircost.." ("..L.merchant_guild..") |cffffffff"..g..L.goldabbrev.." |cffffffff"..s..L.silverabbrev.." |cffffffff"..c..L.copperabbrev..".",255,255,255)
 					else
-						DEFAULT_CHAT_FRAME:AddMessage(L.core_tukui..L.merchant_repaircost.." |cffffffff"..g..L.goldabbrev.." |cffffffff"..s..L.silverabbrev.." |cffffffff"..c..L.copperabbrev..".",255,255,0)
+						DEFAULT_CHAT_FRAME:AddMessage(L.core_prefix..L.merchant_repaircost.." |cffffffff"..g..L.goldabbrev.." |cffffffff"..s..L.silverabbrev.." |cffffffff"..c..L.copperabbrev..".",255,255,255)
 					end
 				else
-					DEFAULT_CHAT_FRAME:AddMessage(L.core_tukui..L.merchant_repairnomoney,255,0,0)
+					DEFAULT_CHAT_FRAME:AddMessage(L.core_prefix..L.merchant_repairnomoney,255,0,0)
 				end
 			end
 		end

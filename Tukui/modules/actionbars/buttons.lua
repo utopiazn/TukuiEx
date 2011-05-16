@@ -168,7 +168,7 @@ end
 
 local function DrPepper(self, bar) -- guess what! :P
 	-- yep, you cannot drink DrPepper while in combat. :(
-	if InCombatLockdown() then print(ERR_NOT_IN_COMBAT) return end
+	if InCombatLockdown() then print(L.core_prefix..ERR_NOT_IN_COMBAT) return end
 	
 	local button = self
 	

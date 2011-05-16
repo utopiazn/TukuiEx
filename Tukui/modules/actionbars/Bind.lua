@@ -4,7 +4,7 @@ local bind = CreateFrame("Frame", "TukuiHoverBind", UIParent)
 
 -- SLASH COMMAND
 SlashCmdList.MOUSEOVERBIND = function()
-	if InCombatLockdown() then print(L.bind_combat) return end
+	if InCombatLockdown() then print(L.core_prefix..L.bind_combat) return end
 	if not bind.loaded then
 		local find = string.find
 		local _G = getfenv(0)
@@ -174,9 +174,9 @@ SlashCmdList.MOUSEOVERBIND = function()
 					SetBinding(self.button.bindings[i])
 				end
 				if T.client == "koKR" then
-					print("|cff00ff00"..self.button.name.."|r의 모든 단축키가 설정 해제되었습니다.")
+					print(L.core_prefix.."|cff00ff00"..self.button.name.."|r의 모든 단축키가 설정 해제되었습니다.")
 				else
-					print("All keybindings cleared for |cff00ff00"..self.button.name.."|r.")
+					print(L.core_prefix.."All keybindings cleared for |cff00ff00"..self.button.name.."|r.")
 				end
 				self:Update(self.button, self.spellmacro)
 				if self.spellmacro~="MACRO" then GameTooltip:Hide() end
@@ -207,9 +207,9 @@ SlashCmdList.MOUSEOVERBIND = function()
 				SetBinding(alt..ctrl..shift..key, self.spellmacro.." "..self.button.name)
 			end
 			if T.client == "koKR" then
-				print("|cff00ff00"..self.button.name.."|r에 "..alt..ctrl..shift..key.."가 지정되었습니다.")
+				print(L.core_prefix.."|cff00ff00"..self.button.name.."|r에 "..alt..ctrl..shift..key.."가 지정되었습니다.")
 			else
-				print(alt..ctrl..shift..key.." |cff00ff00bound to |r"..self.button.name..".")
+				print(L.core_prefix..alt..ctrl..shift..key.." |cff00ff00bound to |r"..self.button.name..".")
 			end
 			self:Update(self.button, self.spellmacro)
 			if self.spellmacro~="MACRO" then GameTooltip:Hide() end
@@ -226,10 +226,10 @@ SlashCmdList.MOUSEOVERBIND = function()
 		function bind:Deactivate(save)
 			if save then
 				SaveBindings(2)
-				print(L.bind_saved)
+				print(L.core_prefix..L.bind_saved)
 			else
 				LoadBindings(2)
-				print(L.bind_discard)
+				print(L.core_prefix..L.bind_discard)
 			end
 			self.enabled = false
 			self:HideFrame()

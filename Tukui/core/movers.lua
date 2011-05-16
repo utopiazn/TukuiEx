@@ -111,7 +111,7 @@ local origa1, origf, origa2, origx, origy
 
 local function moving()
 	-- don't allow moving while in combat
-	if InCombatLockdown() then print(ERR_NOT_IN_COMBAT) return end
+	if InCombatLockdown() then print(L.core_prefix..ERR_NOT_IN_COMBAT) return end
 	
 	for i = 1, getn(T.MoverFrames) do
 		if T.MoverFrames[i] then		
@@ -161,7 +161,7 @@ local protection = CreateFrame("Frame")
 protection:RegisterEvent("PLAYER_REGEN_DISABLED")
 protection:SetScript("OnEvent", function(self, event)
 	if enable then return end
-	print(ERR_NOT_IN_COMBAT)
+	print(L.core_prefix..ERR_NOT_IN_COMBAT)
 	enable = false
 	moving()
 end)
