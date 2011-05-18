@@ -56,8 +56,10 @@ if C["general"].classcolor == true then
 	local r, g, b = unpack(C["media"].bordercolor)
 	local altr, altg, altb = unpack(C["media"].altbordercolor)
 	
-	C["media"].bordercolor = { c[1] * r, c[2] * g, c[3] * b }
-	C["media"].altbordercolor = { c[1] * altr, c[2] * altg, c[3] * altb }
+	if (r == 0.6 and g == 0.6 and b == 0.6) and (altr == 0.4 and altg == 0.4 and altb == 0.4 ) then
+		C["media"].bordercolor = { c[1] * r, c[2] * g, c[3] * b }
+		C["media"].altbordercolor = { c[1] * altr, c[2] * altg, c[3] * altb }
+	end
 end
 
 ---------------------------------------------------

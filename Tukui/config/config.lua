@@ -7,8 +7,6 @@ C["general"] = {
 	["overridehightolow"] = false,                      -- EXPERIMENTAL ONLY! override higher version to lower version on a higher reso.
 	["multisampleprotect"] = true,                      -- i don't recommend this because of shitty border but, voila!
 	["classcolor"] = true,                              -- enable classcolor theme
-	["backdropcolor"] = { .1,.1,.1 },                   -- default backdrop color of panels
-	["bordercolor"] = { .6,.6,.6 },                     -- default border color of panels
 }
 
 C["unitframes"] = {
@@ -25,7 +23,6 @@ C["unitframes"] = {
 	["combatfeedback"] = true,                          -- enable combattext on player and target.
 	["playeraggro"] = true,                             -- color player border to red if you have aggro on current target.
 	["showfocustarget"] = true,                         -- show focus target
-	["bordercolor"] = { .4,.4,.4 },                     -- unit frames panel border color
 
 	-- priest only plugin
 	["weakenedsoulbar"] = true,                         -- show weakened soul bar
