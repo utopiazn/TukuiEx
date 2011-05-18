@@ -327,17 +327,17 @@ oUF:Factory(function(self)
 end)
 
 -- only show 5 groups in raid (25 mans raid)
---[[
-local MaxGroup = CreateFrame("Frame")
-MaxGroup:RegisterEvent("PLAYER_ENTERING_WORLD")
-MaxGroup:RegisterEvent("ZONE_CHANGED_NEW_AREA")
-MaxGroup:SetScript("OnEvent", function(self)
-	local inInstance, instanceType = IsInInstance()
-	local _, _, _, _, maxPlayers, _, _ = GetInstanceInfo()
-	if inInstance and instanceType == "raid" and maxPlayers ~= 40 then
-		TukuiGrid:SetAttribute("groupFilter", "1,2,3,4,5")
-	else
-		TukuiGrid:SetAttribute("groupFilter", "1,2,3,4,5,6,7,8")
-	end
-end)
-]]--
+if C["raidframes"].maxgroup == true then
+	local MaxGroup = CreateFrame("Frame")
+	MaxGroup:RegisterEvent("PLAYER_ENTERING_WORLD")
+	MaxGroup:RegisterEvent("ZONE_CHANGED_NEW_AREA")
+	MaxGroup:SetScript("OnEvent", function(self)
+		local inInstance, instanceType = IsInInstance()
+		local _, _, _, _, maxPlayers, _, _ = GetInstanceInfo()
+		if inInstance and instanceType == "raid" and maxPlayers ~= 40 then
+			TukuiGrid:SetAttribute("groupFilter", "1,2,3,4,5")
+		else
+			TukuiGrid:SetAttribute("groupFilter", "1,2,3,4,5,6,7,8")
+		end
+	end)
+end

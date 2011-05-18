@@ -116,6 +116,7 @@
 	TukuiL.option_raidframes_role = "공격대원 역할 표시"
 	TukuiL.option_raidframes_boss = "우두머리창"
 	TukuiL.option_raidframes_showperpw = "우두머리창 기력 백분율 표시"
+	TukuiL.option_raidframes_maxgroup = "25인 공격대 던전에서 5파티까지만 표시"
 
 	-- castbar
 	TukuiL.option_castbar = "시전바"

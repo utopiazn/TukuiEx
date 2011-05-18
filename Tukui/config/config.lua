@@ -53,6 +53,7 @@ C["raidframes"] = {
 	["maintank"] = false,                               -- enable maintank
 	["mainassist"] = false,                             -- enable mainassist
 	["role"] = false,                                   -- display role on raidframe
+	["maxgroup"] = false,                               -- only show 5 groups in raid (25 mans raid)
 
 	-- boss frames
 	["showboss"] = true,                                -- enable boss unit frames for PVELOL encounters.

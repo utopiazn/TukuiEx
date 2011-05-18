@@ -116,6 +116,7 @@ TukuiL.option_raidframes_mainassist = "Enable Main Assist"
 TukuiL.option_raidframes_role = "Show Role"
 TukuiL.option_raidframes_boss = "Enable Boss Unit Frames"
 TukuiL.option_raidframes_showperpw = "Show boss power percent"
+TukuiL.option_raidframes_maxgroup = "Only show 5 groups in raid (25 mans raid)"
 
 -- castbar
 TukuiL.option_castbar = "Castbar"

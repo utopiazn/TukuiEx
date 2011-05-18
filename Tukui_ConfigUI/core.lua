@@ -149,6 +149,7 @@ local function Local(o)
 	if o == "TukuiConfigUIraidframesrole" then o = TukuiL.option_raidframes_role end
 	if o == "TukuiConfigUIraidframesshowboss" then o = TukuiL.option_raidframes_boss end
 	if o == "TukuiConfigUIraidframesshowperpw" then o = TukuiL.option_raidframes_showperpw end
+	if o == "TukuiConfigUIraidframesmaxgroup" then o = TukuiL.option_raidframes_maxgroup end
 
 	-- castbar
 	if o == "TukuiConfigUIcastbar" then o = TukuiL.option_castbar end
