@@ -106,7 +106,6 @@
 	<Script file="modules\bags\bags.lua"/>
 	<Script file="modules\loot\lootframe.lua"/>
 	<Script file="modules\loot\rollframe.lua"/>
-	<Script file="modules\maps\worldmap.lua"/>
 	<Script file="modules\maps\zonemap.lua"/>
 	<Script file="modules\blizzard\mirror.lua"/>
 	<Script file="modules\notifications\selfbuffs.lua"/>
