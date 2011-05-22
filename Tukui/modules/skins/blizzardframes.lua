@@ -2456,8 +2456,8 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 		}
 		
 		ScriptErrorsFrame:SetBackdrop(bg)
-		ScriptErrorsFrame:SetBackdropColor(unpack(C["media"].backdropcolor))
-		ScriptErrorsFrame:SetBackdropBorderColor(unpack(C["media"].bordercolor))	
+		ScriptErrorsFrame:SetBackdropColor(unpack(C.media.backdropcolor))
+		ScriptErrorsFrame:SetBackdropBorderColor(unpack(C.media.bordercolor))	
 
 		EventTraceFrame:SetTemplate("Default")
 		
@@ -2492,8 +2492,8 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 				
 				SkinButton(child)
 				child:SetBackdrop(bg)
-				child:SetBackdropColor(unpack(C["media"].backdropcolor))
-				child:SetBackdropBorderColor(unpack(C["media"].bordercolor))	
+				child:SetBackdropColor(unpack(C.media.backdropcolor))
+				child:SetBackdropBorderColor(unpack(C.media.bordercolor))	
 			end
 		end	
 	end
@@ -2627,9 +2627,9 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 						_G["AchievementAlertFrame"..i.."Shine"]:Kill()
 						
 						-- Text
-						_G["AchievementAlertFrame"..i.."Unlocked"]:SetFont(C["media"].font, 12)
+						_G["AchievementAlertFrame"..i.."Unlocked"]:SetFont(C.media.font, 12)
 						_G["AchievementAlertFrame"..i.."Unlocked"]:SetTextColor(1, 1, 1)
-						_G["AchievementAlertFrame"..i.."Name"]:SetFont(C["media"].font, 14)
+						_G["AchievementAlertFrame"..i.."Name"]:SetFont(C.media.font, 14)
 
 						-- Icon
 						_G["AchievementAlertFrame"..i.."IconTexture"]:SetTexCoord(0.08, 0.92, 0.08, 0.92)
@@ -4732,7 +4732,7 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 			
 			for i = 1, getn(skins) do
 				_G[skins[i]]:SetTemplate("Default")
-				if _G[skins[i]] ~= _G["GhostFrameContentsFrame"] or _G[skins[i]] ~= _G["AutoCompleteBox"] then -- frame to blacklist from create shadow function
+				if _G[skins[i]] ~= _G["AutoCompleteBox"] then -- frame to blacklist from create shadow function
 					_G[skins[i]]:CreateShadow("Default")
 				end
 			end
@@ -4811,29 +4811,6 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 			
 			if IsAddOnLoaded("OptionHouse") then
 				SkinButton(GameMenuButtonOptionHouse)
-			end
-			
-			-- skin return to graveyard button
-			do
-				SkinButton(GhostFrame)
-				GhostFrame:SetBackdropColor(0,0,0,0)
-				GhostFrame:SetBackdropBorderColor(0,0,0,0)
-				GhostFrame.SetBackdropColor = T.dummy
-				GhostFrame.SetBackdropBorderColor = T.dummy
-				GhostFrame:ClearAllPoints()
-				GhostFrame:SetPoint("TOP", UIParent, "TOP", 0, -150)
-				SkinButton(GhostFrameContentsFrame)
-				GhostFrameContentsFrameIcon:SetTexture(nil)
-				local x = CreateFrame("Frame", nil, GhostFrame)
-				x:SetFrameStrata("MEDIUM")
-				x:SetTemplate("Default")
-				x:SetPoint("TOPLEFT", GhostFrameContentsFrameIcon, "TOPLEFT", T.Scale(-2), T.Scale(2))
-				x:SetPoint("BOTTOMRIGHT", GhostFrameContentsFrameIcon, "BOTTOMRIGHT", T.Scale(2), T.Scale(-2))
-				local tex = x:CreateTexture(nil, "OVERLAY")
-				tex:SetTexture("Interface\\Icons\\spell_holy_guardianspirit")
-				tex:SetTexCoord(0.1, 0.9, 0.1, 0.9)
-				tex:SetPoint("TOPLEFT", x, "TOPLEFT", T.Scale(2), T.Scale(-2))
-				tex:SetPoint("BOTTOMRIGHT", x, "BOTTOMRIGHT", T.Scale(-2), T.Scale(2))
 			end
 			
 			-- hide header textures and move text/buttons.
