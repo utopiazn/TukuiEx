@@ -82,7 +82,7 @@ local function ChatCopyButtons()
 		button:SetPoint("TOPRIGHT", 0, 0)
 		button:Height(20)
 		button:Width(20)
-		button:SetNormalTexture(C["media"].copyicon)
+		button:SetNormalTexture(C.media.copyicon)
 		button:SetAlpha(0)
 		button:SetTemplate("Default")
 

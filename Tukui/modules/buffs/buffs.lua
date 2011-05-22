@@ -1,5 +1,5 @@
 ﻿local T, C, L = unpack(select(2, ...)) -- Import: T - functions, constants, variables; C - config; L - locales
-if (C["auras"].player ~= true) or (C["auras"].playerauras) then return end
+if (C.auras.player ~= true) or (C.auras.playerauras) then return end
 
 local FormatTime = function(s)
 	local day, hour, minute = 86400, 3600, 60
@@ -42,7 +42,7 @@ local function UpdateWeapons(button, slot, active, expiration)
 		
 		button.time = button:CreateFontString(nil, "ARTWORK")
 		button.time:SetPoint("BOTTOM", 0, -17)
-		button.time:SetFont(C["media"].font, 12, "OUTLINE")
+		button.time:SetFont(C.media.font, 12, "OUTLINE")
 				
 		button.bg = CreateFrame("Frame", nil, button)
 		button.bg:CreatePanel("Default", 30, 30, "CENTER", button, "CENTER", 0, 0)
@@ -84,11 +84,11 @@ local function UpdateAuras(header, button, weapon)
 
 		button.count = button:CreateFontString(nil, "ARTWORK")
 		button.count:SetPoint("BOTTOMRIGHT", -1, 1)
-		button.count:SetFont(C["media"].font, 12, "OUTLINE")
+		button.count:SetFont(C.media.font, 12, "OUTLINE")
 
 		button.time = button:CreateFontString(nil, "ARTWORK")
 		button.time:SetPoint("BOTTOM", 0, -17)
-		button.time:SetFont(C["media"].font, 12, "OUTLINE")
+		button.time:SetFont(C.media.font, 12, "OUTLINE")
 
 		button:SetScript("OnUpdate", UpdateTime)
 		
@@ -111,7 +111,7 @@ local function UpdateAuras(header, button, weapon)
 			if caster == "vehicle" then
 				button.bg:SetBackdropBorderColor(75/255,  175/255, 76/255)
 			else
-				button.bg:SetBackdropBorderColor(unpack(C["media"].bordercolor))
+				button.bg:SetBackdropBorderColor(unpack(C.media.bordercolor))
 			end
 		end
 	end
@@ -193,7 +193,7 @@ local function CreateAuraHeader(filter, ...)
 	header:SetBackdropBorderColor(0,0,0,0)
 	header:Show()
 	
-	header.text = T.SetFontString(header, C["media"].uffont, 12)
+	header.text = T.SetFontString(header, C.media.uffont, 12)
 	header.text:SetPoint("CENTER")
 	if filter == "HELPFUL" then
 		header.text:SetText(L.move_buffs)

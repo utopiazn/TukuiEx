@@ -13,7 +13,7 @@ TukuiMinimap:Point("TOPRIGHT", UIParent, "TOPRIGHT", -5, -5)
 TukuiMinimap:Size(144)
 TukuiMinimap:SetClampedToScreen(true)
 TukuiMinimap:SetMovable(true)
-TukuiMinimap.text = T.SetFontString(TukuiMinimap, C["media"].uffont, 12)
+TukuiMinimap.text = T.SetFontString(TukuiMinimap, C.media.uffont, 12)
 TukuiMinimap.text:SetPoint("CENTER")
 TukuiMinimap.text:SetText(L.move_minimap)
 
@@ -110,7 +110,7 @@ Minimap:SetScript("OnMouseWheel", function(self, d)
 end)
 
 -- Set Square Map Mask
-Minimap:SetMaskTexture(C["media"].blank)
+Minimap:SetMaskTexture(C.media.blank)
 
 -- For others mods with a minimap button, set minimap buttons position in square mode.
 function GetMinimapShape() return "SQUARE" end
@@ -150,12 +150,12 @@ TukuiMinimap:SetScript("OnEvent", function(self, event, addon)
 				TukuiMinimapStatsRight:SetBackdropBorderColor(0, 1, 0)
 			end
 		else -- None of the above
-			TukuiMinimap:SetBackdropBorderColor(unpack(C["media"].bordercolor))
+			TukuiMinimap:SetBackdropBorderColor(unpack(C.media.bordercolor))
 			if TukuiMinimapStatsLeft then
-				TukuiMinimapStatsLeft:SetBackdropBorderColor(unpack(C["media"].bordercolor))
+				TukuiMinimapStatsLeft:SetBackdropBorderColor(unpack(C.media.bordercolor))
 			end
 			if TukuiMinimapStatsRight then
-				TukuiMinimapStatsRight:SetBackdropBorderColor(unpack(C["media"].bordercolor))
+				TukuiMinimapStatsRight:SetBackdropBorderColor(unpack(C.media.bordercolor))
 			end
 		end
 	end

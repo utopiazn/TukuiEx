@@ -59,7 +59,7 @@ local function SetChatStyle(frame)
 	tab:SetAlpha(1)
 	tab.SetAlpha = UIFrameFadeRemoveFrame
 
-	if not C["chat"].background and not frame.temp then
+	if not C.chat.background and not frame.temp then
 		-- hide text when setting chat
 		_G[chat.."TabText"]:Hide()
 		
@@ -69,7 +69,7 @@ local function SetChatStyle(frame)
 	end
 	
 	-- change tab font
-	_G[chat.."TabText"]:SetFont(C["media"].font, 11)
+	_G[chat.."TabText"]:SetFont(C.media.font, 11)
 	
 	-- yeah baby
 	_G[chat]:SetClampRectInsets(0,0,0,0)
@@ -161,7 +161,7 @@ local function SetChatStyle(frame)
 		if ( type == "CHANNEL" ) then
 		local id = GetChannelName(_G[chat.."EditBox"]:GetAttribute("channelTarget"))
 			if id == 0 then
-				colorize(unpack(C["media"].bordercolor))
+				colorize(unpack(C.media.bordercolor))
 			else
 				colorize(ChatTypeInfo[type..id].r,ChatTypeInfo[type..id].g,ChatTypeInfo[type..id].b)
 			end
@@ -235,7 +235,7 @@ local function SetupChatPosAndFont(self)
 	-- reposition battle.net popup over chat #1
 	BNToastFrame:HookScript("OnShow", function(self)
 		self:ClearAllPoints()
-		if C["chat"].background and TukuiChatBackgroundLeft then
+		if C.chat.background and TukuiChatBackgroundLeft then
 			self:Point("BOTTOMLEFT", TukuiChatBackgroundLeft, "TOPLEFT", 0, 6)
 		else
 			self:Point("BOTTOMLEFT", ChatFrame1, "TOPLEFT", 0, 6)

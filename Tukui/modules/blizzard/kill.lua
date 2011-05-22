@@ -16,7 +16,7 @@ Kill:SetScript("OnEvent", function(self, event, addon)
 		end	
 	else
 		if addon == "Blizzard_AchievementUI" then
-			if C["tooltip"].enable then
+			if C.tooltip.enable then
 				hooksecurefunc("AchievementFrameCategories_DisplayButton", function(button) button.showTooltipFunc = nil end)
 			end
 		end
@@ -29,7 +29,7 @@ Kill:SetScript("OnEvent", function(self, event, addon)
 		PartyMemberBackground:Kill()
 		TutorialFrameAlertButton:Kill()
 		
-		if C["auras"].player or C["auras"].playerauras then
+		if C.auras.player or C.auras.playerauras then
 			BuffFrame:Kill()
 			TemporaryEnchantFrame:Kill()
 			ConsolidatedBuffs:Kill()
@@ -41,20 +41,20 @@ Kill:SetScript("OnEvent", function(self, event, addon)
 		-- make sure boss or arena frame is always disabled when running tukui
 		SetCVar("showArenaEnemyFrames", 0)
 		
-		if C["unitframes"].arenaframes then
+		if C.unitframes.arenaframes then
 			InterfaceOptionsUnitFramePanelArenaEnemyFrames:Kill()
 			InterfaceOptionsUnitFramePanelArenaEnemyCastBar:Kill()
 			InterfaceOptionsUnitFramePanelArenaEnemyPets:Kill()
 		end
 		
-		if C["chat"].enable then
+		if C.chat.enable then
 			SetCVar("WholeChatWindowClickable", 0)
 			SetCVar("ConversationMode", "inline")
 			InterfaceOptionsSocialPanelWholeChatWindowClickable:Kill()
 			InterfaceOptionsSocialPanelConversationMode:Kill()
 		end
 		
-		if C["unitframes"].enable then
+		if C.unitframes.enable then
 			PlayerFrame:Kill() -- Just to be sure we are safe
 			InterfaceOptionsFrameCategoriesButton9:SetScale(0.00001)
 			InterfaceOptionsFrameCategoriesButton9:SetAlpha(0)	
@@ -62,7 +62,7 @@ Kill:SetScript("OnEvent", function(self, event, addon)
 			InterfaceOptionsFrameCategoriesButton9:SetAlpha(0)
 		end
 		
-		if C["actionbar"].enable then
+		if C.actionbar.enable then
 			InterfaceOptionsActionBarsPanelBottomLeft:Kill()
 			InterfaceOptionsActionBarsPanelBottomRight:Kill()
 			InterfaceOptionsActionBarsPanelRight:Kill()

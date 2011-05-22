@@ -21,12 +21,12 @@ ssmover:SetTemplate("Default")
 ssmover:SetFrameStrata("HIGH")
 ssmover:SetBackdropBorderColor(1,0,0)
 ssmover:SetAlpha(0)
-ssmover.text = T.SetFontString(ssmover, C["media"].uffont, 12)
+ssmover.text = T.SetFontString(ssmover, C.media.uffont, 12)
 ssmover.text:SetPoint("CENTER")
 ssmover.text:SetText(L.move_shapeshift)
 
 -- hide it if not needed and stop executing code
-if C["actionbar"].hideshapeshift then TukuiShift:Hide() return end
+if C.actionbar.hideshapeshift then TukuiShift:Hide() return end
 
 -- create the shapeshift bar if we enabled it
 local bar = CreateFrame("Frame", "TukuiShapeShift", TukuiShift, "SecureHandlerStateTemplate")

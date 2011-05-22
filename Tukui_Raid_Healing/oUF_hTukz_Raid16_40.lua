@@ -54,7 +54,7 @@ local function Shared(self, unit)
 	
 	health.frequentUpdates = true
 	
-	if C["unitframes"].unicolor == true then
+	if C.unitframes.unicolor == true then
 		health.colorDisconnected = false
 		health.colorClass = false
 		health:SetStatusBarColor(.3, .3, .3, 1)
@@ -81,7 +81,7 @@ local function Shared(self, unit)
 	power.bg:SetAlpha(1)
 	power.bg.multiplier = 0.4
 	
-	if C["unitframes"].unicolor == true then
+	if C.unitframes.unicolor == true then
 		power.colorClass = true
 		power.bg.multiplier = 0.1				
 	else

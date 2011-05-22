@@ -36,13 +36,13 @@ local function exec(self, enable)
 			self:SetBackdropBorderColor(1,0,0,1)
 		else 
 			Minimap:Show()
-			self:SetBackdropBorderColor(unpack(C["media"].bordercolor))
+			self:SetBackdropBorderColor(unpack(C.media.bordercolor))
 		end
 	end
 	
 	if self == TukuiPlayerBuffs or self == TukuiPlayerDebuffs then
 		if enable then
-			self:SetBackdropColor(unpack(C["media"].backdropcolor))
+			self:SetBackdropColor(unpack(C.media.backdropcolor))
 			self:SetBackdropBorderColor(1,0,0,1)	
 		else
 			local position = self:GetPoint()			
@@ -90,7 +90,7 @@ local function exec(self, enable)
 	if self == TukuiWatchFrameAnchor then
 		if enable then
 			TukuiWatchFrameAnchor:SetBackdropBorderColor(1,0,0,1)
-			TukuiWatchFrameAnchor:SetBackdropColor(unpack(C["media"].backdropcolor))		
+			TukuiWatchFrameAnchor:SetBackdropColor(unpack(C.media.backdropcolor))		
 		else
 			TukuiWatchFrameAnchor:SetBackdropBorderColor(0,0,0,0)
 			TukuiWatchFrameAnchor:SetBackdropColor(0,0,0,0)		

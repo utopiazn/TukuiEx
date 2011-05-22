@@ -5,7 +5,7 @@ local T, C, L = unpack(select(2, ...)) -- Import: T - functions, constants, vari
 local noop = T.dummy
 local floor = math.floor
 local class = T.myclass
-local texture = C["media"].blank
+local texture = C.media.blank
 local backdropr, backdropg, backdropb, backdropa, borderr, borderg, borderb = 0, 0, 0, 1, 0, 0, 0
 
 -- pixel perfect script of custom ui Scale.
@@ -90,13 +90,13 @@ local function Point(obj, arg1, arg2, arg3, arg4, arg5)
 end
 
 local function SetTemplate(f, t, tex)
-	if tex then texture = C["media"].normTex else texture = C["media"].blank end
+	if tex then texture = C.media.normTex else texture = C.media.blank end
 	
 	GetTemplate(t)
 		
 	f:SetBackdrop({
 	  bgFile = texture, 
-	  edgeFile = C["media"].blank, 
+	  edgeFile = C.media.blank, 
 	  tile = false, tileSize = 0, edgeSize = mult, 
 	  insets = { left = -mult, right = -mult, top = -mult, bottom = -mult}
 	})

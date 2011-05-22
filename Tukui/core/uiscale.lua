@@ -2,7 +2,7 @@ local T, C, L = unpack(select(2, ...)) -- Import: T - functions, constants, vari
 
 T.UIScale = function()
 	if T.getscreenwidth < 1600 then
-			if C["general"].overridelowtohigh == true then
+			if C.general.overridelowtohigh == true then
 				C["general"].autoscale = false
 				T.lowversion = false
 			else
@@ -30,13 +30,13 @@ T.UIScale = function()
 		if width >= 3840 and width < 4080 then width = 1224 end 	                -- SXGA & SXGA (UVGA) & WXGA & HDTV
 		
 		-- yep, now set Tukui to lower reso if screen #1 width < 1600
-		if width < 1600 and not C["general"].overridelowtohigh then
+		if width < 1600 and not C.general.overridelowtohigh then
 			T.lowversion = true
 		end
 		
 		-- register a constant, we will need it later for launch.lua
 		T.eyefinity = width
-	elseif C["general"].overridehightolow == true then
+	elseif C.general.overridehightolow == true then
 		T.lowversion = true
 	end
 	
@@ -44,7 +44,7 @@ T.UIScale = function()
 		C["general"].uiscale = min(2, max(.64, 768/string.match(({GetScreenResolutions()})[GetCurrentResolution()], "%d+x(%d+)")))
 	end
 
-	if T.lowversion and not C["general"].overridehightolow == true then
+	if T.lowversion and not C.general.overridehightolow == true then
 		T.raidscale = 0.8
 	else
 		T.raidscale = 1
