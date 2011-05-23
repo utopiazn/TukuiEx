@@ -6,7 +6,7 @@
 -- adding an auto disable if some mods are loaded
 local T, C, L = unpack(select(2, ...)) -- Import: T - functions, constants, variables; C - config; L - locales
 
-if (IsAddOnLoaded("Stuf") or IsAddOnLoaded("PitBull4") or IsAddOnLoaded("ShadowedUnitFrames") or IsAddOnLoaded("ag_UnitFrames")) or IsAddOnLoaded("InvenUnitFrames")) then
+if (IsAddOnLoaded("Stuf") or IsAddOnLoaded("PitBull4") or IsAddOnLoaded("ShadowedUnitFrames") or IsAddOnLoaded("ag_UnitFrames") or IsAddOnLoaded("InvenUnitFrames")) then
 	C["unitframes"].enable = false
 end
 
@@ -14,7 +14,7 @@ if (IsAddOnLoaded("TidyPlates") or IsAddOnLoaded("Aloft")) then
 	C["nameplate"].enable = false
 end
 
-if (IsAddOnLoaded("Dominos") or IsAddOnLoaded("Bartender4") or IsAddOnLoaded("Macaroon")) or IsAddOnLoaded("InvenActionBar")) then
+if (IsAddOnLoaded("Dominos") or IsAddOnLoaded("Bartender4") or IsAddOnLoaded("Macaroon") or IsAddOnLoaded("InvenActionBar")) then
 	C["actionbar"].enable = false
 end
 
