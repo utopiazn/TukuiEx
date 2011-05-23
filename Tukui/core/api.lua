@@ -17,6 +17,20 @@ end
 T.Scale = function(x) return Scale(x) end
 T.mult = mult
 
+-- classcolor theme for Tukui : Extended Edition by 달빛야수 @ Ragnaros (KR)
+if C["general"].classcolor == true then
+	local c = T.oUF_colors.class[class]
+	local r, g, b = unpack(C["media"].bordercolor)
+	local altr, altg, altb = unpack(C["media"].altbordercolor)
+	
+	if not (r == 0.6 and g == 0.6 and b == 0.6) or not (altr == 0.4 and altg == 0.4 and altb == 0.4 ) then
+		C["general"].classcolor = false
+	else	
+		C["media"].bordercolor = { c[1] * r, c[2] * g, c[3] * b }
+		C["media"].altbordercolor = { c[1] * altr, c[2] * altg, c[3] * altb }
+	end
+end
+
 ---------------------------------------------------
 -- TEMPLATES
 ---------------------------------------------------
@@ -47,18 +61,6 @@ local function GetTemplate(t)
 	else
 		borderr, borderg, borderb = unpack(C["media"].bordercolor)
 		backdropr, backdropg, backdropb = unpack(C["media"].backdropcolor)
-	end
-end
-
--- classcolor theme for Tukui : Extended Edition by 달빛야수 @ Ragnaros (KR)
-if C["general"].classcolor == true then
-	local c = T.oUF_colors.class[class]
-	local r, g, b = unpack(C["media"].bordercolor)
-	local altr, altg, altb = unpack(C["media"].altbordercolor)
-	
-	if (r == 0.6 and g == 0.6 and b == 0.6) and (altr == 0.4 and altg == 0.4 and altb == 0.4 ) then
-		C["media"].bordercolor = { c[1] * r, c[2] * g, c[3] * b }
-		C["media"].altbordercolor = { c[1] * altr, c[2] * altg, c[3] * altb }
 	end
 end
 
