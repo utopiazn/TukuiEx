@@ -31,7 +31,7 @@ anchor:SetFrameStrata("TOOLTIP")
 anchor:SetFrameLevel(20)
 anchor:SetClampedToScreen(true)
 anchor:SetAlpha(0)
-if C.chat.background and TukuiChatBackgroundRight then
+if C["chat"].background and TukuiChatBackgroundRight then
 	anchor:SetPoint("BOTTOMRIGHT", TukuiChatBackgroundRight, "TOPRIGHT", 0, -TukuiInfoRight:GetHeight())
 else
 	anchor:SetPoint("BOTTOMRIGHT", TukuiInfoRight)
@@ -39,7 +39,7 @@ end
 anchor:SetTemplate("Default")
 anchor:SetBackdropBorderColor(1, 0, 0, 1)
 anchor:SetMovable(true)
-anchor.text = T.SetFontString(anchor, C.media.uffont, 12)
+anchor.text = T.SetFontString(anchor, C["media"].uffont, 12)
 anchor.text:SetPoint("CENTER")
 anchor.text:SetText(L.move_tooltip)
 
@@ -59,9 +59,9 @@ local function UpdateTooltip(self)
 		-- or showing background sometime ~blue :x		
 		if NeedBackdropBorderRefresh then
 			NeedBackdropBorderRefresh = false			
-			self:SetBackdropColor(unpack(C.media.backdropcolor))
+			self:SetBackdropColor(unpack(C["media"].backdropcolor))
 			if not C["tooltip"].cursor then
-				self:SetBackdropBorderColor(unpack(C.media.bordercolor))
+				self:SetBackdropBorderColor(unpack(C["media"].bordercolor))
 			end
 		end
 	elseif self:GetAnchorType() == "ANCHOR_NONE" and InCombatLockdown() and C["tooltip"].hidecombat == true then
@@ -220,7 +220,7 @@ healthBar:ClearAllPoints()
 healthBar:Height(6)
 healthBar:Point("BOTTOMLEFT", healthBar:GetParent(), "TOPLEFT", 2, 5)
 healthBar:Point("BOTTOMRIGHT", healthBar:GetParent(), "TOPRIGHT", -2, 5)
-healthBar:SetStatusBarTexture(C.media.normTex)
+healthBar:SetStatusBarTexture(C["media"].normTex)
 
 local healthBarBG = CreateFrame("Frame", "StatusBarBG", healthBar)
 healthBarBG:SetFrameLevel(healthBar:GetFrameLevel() - 1)
@@ -431,7 +431,7 @@ TukuiTooltip:SetScript("OnEvent", function(self, event, addon)
 		if addon ~= "Blizzard_DebugTools" then return end
 		
 		if FrameStackTooltip then
-			FrameStackTooltip:SetScale(C.general.uiscale)
+			FrameStackTooltip:SetScale(C["general"].uiscale)
 			
 			-- Skin it
 			FrameStackTooltip:HookScript("OnShow", function(self) self:SetTemplate("Default") end)

@@ -124,7 +124,7 @@ function Stuffing:SlotUpdate(b)
 	
 	-- set all slot color to default tukui on update
 	if not b.frame.lock then
-		b.frame:SetBackdropBorderColor(unpack(C.media.bordercolor))
+		b.frame:SetBackdropBorderColor(unpack(C["media"].bordercolor))
 	end
 	
 	if b.Cooldown then

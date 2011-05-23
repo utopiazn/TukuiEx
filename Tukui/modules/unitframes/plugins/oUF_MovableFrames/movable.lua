@@ -1,6 +1,6 @@
 local T, C, L = unpack(select(2, ...)) -- Import: T - functions, constants, variables; C - config; L - locales
 
-if C.unitframes.enable ~= true then return end
+if C["unitframes"].enable ~= true then return end
 
 local _, ns = ...
 local oUF = ns.oUF or oUF
@@ -356,7 +356,7 @@ do
 		local name = backdrop:CreateFontString(nil, "OVERLAY", "GameFontNormal")
 		name:SetPoint"CENTER"
 		name:SetJustifyH"CENTER"
-		name:SetFont(C.media.uffont, 12)
+		name:SetFont(C["media"].uffont, 12)
 		name:SetTextColor(1, 1, 1)
 
 		backdrop.name = name

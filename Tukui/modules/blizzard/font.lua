@@ -13,9 +13,9 @@ TukuiFonts:RegisterEvent("ADDON_LOADED")
 TukuiFonts:SetScript("OnEvent", function(self, event, addon)
 	if addon ~= "Tukui" then return end
 	
-	local NORMAL     = C.media.font
-	local COMBAT     = C.media.dmgfont
-	local NUMBER     = C.media.font
+	local NORMAL     = C["media"].font
+	local COMBAT     = C["media"].dmgfont
+	local NUMBER     = C["media"].uffont
 
 	if T.eyefinity then
 		-- damage are huge on eyefinity, so we disable it

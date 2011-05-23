@@ -15,7 +15,7 @@ end
 
 if T.myname == "Tukz" then
 	-- yeah my default config is not really like default tukui.
-	C.actionbar.hotkey = false
-	C.actionbar.hideshapeshift = true
-	C.unitframes.enemyhcolor = true
+	C["actionbar"].hotkey = false
+	C["actionbar"].hideshapeshift = true
+	C["unitframes"].enemyhcolor = true
 end

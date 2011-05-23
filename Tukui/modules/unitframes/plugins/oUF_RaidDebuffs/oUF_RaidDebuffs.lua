@@ -1,7 +1,7 @@
 local T, C, L = unpack(select(2, ...)) -- Import: T - functions, constants, variables; C - config; L - locales
 -- yleaf (yaroot@gmail.com)
 
-if C.unitframes.enable ~= true or C.raidframes.raidunitdebuffwatch ~= true then return end
+if C["unitframes"].enable ~= true or C["raidframes"].raidunitdebuffwatch ~= true then return end
 
 local _, ns = ...
 local oUF = ns.oUF or oUF

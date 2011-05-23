@@ -224,10 +224,10 @@ T.TukuiPetBarUpdate = function(self, event)
 end
 
 -- Define action bar buttons size
-T.buttonsize = T.Scale(C.actionbar.buttonsize)
-T.buttonspacing = T.Scale(C.actionbar.buttonspacing)
-T.petbuttonsize = T.Scale(C.actionbar.petbuttonsize)
-T.petbuttonspacing = T.Scale(C.actionbar.buttonspacing)
+T.buttonsize = T.Scale(C["actionbar"].buttonsize)
+T.buttonspacing = T.Scale(C["actionbar"].buttonspacing)
+T.petbuttonsize = T.Scale(C["actionbar"].petbuttonsize)
+T.petbuttonspacing = T.Scale(C["actionbar"].buttonspacing)
 
 T.Round = function(number, decimals)
 	if not decimals then decimals = 0 end
@@ -692,7 +692,7 @@ T.PostUpdateAura = function(icons, unit, icon, index, offset, filter, isDebuff, 
 		if (isStealable or ((T.myclass == "MAGE" or T.myclass == "PRIEST" or T.myclass == "SHAMAN") and dtype == "Magic")) and not UnitIsFriend("player", unit) then
 			icon:SetBackdropBorderColor(1, 0.85, 0, 1)
 		else
-			icon:SetBackdropBorderColor(unpack(C.media.bordercolor))
+			icon:SetBackdropBorderColor(unpack(C["media"].bordercolor))
 		end
 	end
 	
@@ -884,7 +884,7 @@ T.UpdateManaLevel = function(self, elapsed)
 
 	local percMana = UnitMana("player") / UnitManaMax("player") * 100
 
-	if percMana <= C.unitframes.lowThreshold then
+	if percMana <= C["unitframes"].lowThreshold then
 		self.ManaLevel:SetText("|cffaf5050"..L.unitframes_ouf_lowmana.."|r")
 		Flash(self, 0.3)
 	else
@@ -1013,7 +1013,7 @@ T.createAuraWatch = function(self, unit)
 			local tex = icon:CreateTexture(nil, "OVERLAY")
 			tex:SetAllPoints(icon)
 			--[[
-			tex:SetTexture(C.media.blank)
+			tex:SetTexture(C["media"].blank)
 			if (spell[3]) then
 				tex:SetVertexColor(unpack(spell[3]))
 			else

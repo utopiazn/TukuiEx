@@ -5,7 +5,7 @@ if C["chat"].enable ~= true then return end
 --	Play sound files system
 ------------------------------------------------------------------------
 
-if C.chat.whispersound then
+if C["chat"].whispersound then
 	local SoundSys = CreateFrame("Frame")
 	SoundSys:RegisterEvent("CHAT_MSG_WHISPER")
 	SoundSys:RegisterEvent("CHAT_MSG_BN_WHISPER")

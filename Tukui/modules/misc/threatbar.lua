@@ -11,16 +11,16 @@ local TukuiThreatBar = CreateFrame("StatusBar", "TukuiThreatBar", TukuiInfoRight
 TukuiThreatBar:Point("TOPLEFT", 2, -2)
 TukuiThreatBar:Point("BOTTOMRIGHT", -2, 2)
 
-TukuiThreatBar:SetStatusBarTexture(C.media.normTex)
+TukuiThreatBar:SetStatusBarTexture(C["media"].normTex)
 TukuiThreatBar:GetStatusBarTexture():SetHorizTile(false)
-TukuiThreatBar:SetBackdrop({bgFile = C.media.blank})
+TukuiThreatBar:SetBackdrop({bgFile = C["media"].blank})
 TukuiThreatBar:SetBackdropColor(0, 0, 0, 0)
 TukuiThreatBar:SetMinMaxValues(0, 100)
 
-TukuiThreatBar.text = T.SetFontString(TukuiThreatBar, C.media.font, 12)
+TukuiThreatBar.text = T.SetFontString(TukuiThreatBar, C["media"].font, 12)
 TukuiThreatBar.text:Point("RIGHT", TukuiThreatBar, "RIGHT", -30, 0)
 
-TukuiThreatBar.Title = T.SetFontString(TukuiThreatBar, C.media.font, 12)
+TukuiThreatBar.Title = T.SetFontString(TukuiThreatBar, C["media"].font, 12)
 TukuiThreatBar.Title:SetText(L.unitframes_ouf_threattext)
 TukuiThreatBar.Title:Point("LEFT", TukuiThreatBar, "LEFT", 30, 0)
 	  
