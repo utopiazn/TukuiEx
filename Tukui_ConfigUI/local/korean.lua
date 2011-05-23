@@ -11,6 +11,8 @@
 	TukuiL.option_general_multisample = "멀티샘플링 1배 유지 (깨끗한 1px 선)"
 	TukuiL.option_general_customuiscale = "인터페이스 크기 (자동 인터페이스 크기를 사용하지 않는다면)"
 	TukuiL.option_general_classcolor = "직업 색상 사용"
+	TukuiL.option_general_backdropcolor = "기본 배경 색상"
+	TukuiL.option_general_bordercolor = "기본 선 색상"
 	
 	-- media
 	TukuiL.option_media = "미디어"
@@ -90,6 +92,7 @@
 	TukuiL.option_unitframes_enemypower = "PVP대상만 마나, 분노, 기력 및 집중 표시"
 	TukuiL.option_unitframes_enemyhostilitycolor = "적대감에 의존한 대상 생명력바 색상"
 	TukuiL.option_unitframes_focus = "주시대상의 대상 표시"
+	TukuiL.option_unitframes_bordercolor = "기본 선 색상"
 	TukuiL.option_unitframes_manalow = "마나가 낮으면 경고"
 	TukuiL.option_unitframes_unicolor = "통합 색상 사용 (회색 생명력바)"
 	TukuiL.option_unitframes_classbar = "직업바"

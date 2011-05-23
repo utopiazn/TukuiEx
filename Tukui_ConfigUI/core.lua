@@ -5,7 +5,6 @@ local myPlayerName  = UnitName("player")
 
 local ALLOWED_GROUPS = {
 	["general"]=1,
-	["media"]=1,
 	["unitframes"]=1,
 	["raidframes"]=1,
 	["castbar"]=1,
@@ -41,6 +40,8 @@ local function Local(o)
 	if o == "TukuiConfigUIgeneralmultisampleprotect" then o = TukuiL.option_general_multisample end
 	if o == "TukuiConfigUIgeneraluiscale" then o = TukuiL.option_general_customuiscale end
 	if o == "TukuiConfigUIgeneralclasscolor" then o = TukuiL.option_general_classcolor end
+	if o == "TukuiConfigUIgeneralbackdropcolor" then o = TukuiL.option_general_backdropcolor end
+	if o == "TukuiConfigUIgeneralbordercolor" then o = TukuiL.option_general_bordercolor end
 	
 	-- media
 	if o == "TukuiConfigUImedia" then o = TukuiL.option_media end
@@ -122,6 +123,7 @@ local function Local(o)
 	if o == "TukuiConfigUIunitframestargetpowerpvponly" then o = TukuiL.option_unitframes_enemypower end
 	if o == "TukuiConfigUIunitframesenemyhcolor" then o = TukuiL.option_unitframes_enemyhostilitycolor end
 	if o == "TukuiConfigUIunitframesshowfocustarget" then o = TukuiL.option_unitframes_focus end
+	if o == "TukuiConfigUIunitframesbordercolor" then o = TukuiL.option_unitframes_bordercolor end
 	if o == "TukuiConfigUIunitframeslowThreshold" then o = TukuiL.option_unitframes_manalow end
 	if o == "TukuiConfigUIunitframesunicolor" then o = TukuiL.option_unitframes_unicolor end
 	if o == "TukuiConfigUIunitframesclassbar" then o = TukuiL.option_unitframes_classbar end

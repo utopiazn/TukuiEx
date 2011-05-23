@@ -11,6 +11,8 @@ TukuiL.option_general_overridelow = "Use Low resolution  layout on a Higher reso
 TukuiL.option_general_multisample = "Multisampling protection (clean 1px border)"
 TukuiL.option_general_customuiscale = "UI Scale (if auto-scale is disabled)"
 TukuiL.option_general_classcolor = "Class Color Theme"
+TukuiL.option_general_backdropcolor = "Set default backdrop color of panels"
+TukuiL.option_general_bordercolor = "Set default border color of panels"
 
 -- media
 TukuiL.option_media = "Media"
@@ -90,6 +92,7 @@ TukuiL.option_unitframes_enable = "Enable Tukui Unit Frames"
 TukuiL.option_unitframes_enemypower = "Enable Power display on enemy only"
 TukuiL.option_unitframes_enemyhostilitycolor = "Color enemy health bar by hostility (for PVP)"
 TukuiL.option_unitframes_focus = "Enable Focus target"
+TukuiL.option_unitframes_bordercolor = "Set default border color of panels"
 TukuiL.option_unitframes_manalow = "Low mana indicator (All mana class)"
 TukuiL.option_unitframes_unicolor = "Enable Unique color theme (grey health bar)"
 TukuiL.option_unitframes_classbar = "Enable class bar"
