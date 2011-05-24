@@ -234,7 +234,7 @@ end)
 ----------------------------------------------------------------------------------------
 -- Mouseover map, displaying zone and coords
 ----------------------------------------------------------------------------------------
-if C["map"].mlocation == true then
+if not C["panels"].location then
 	local m_zone = CreateFrame("Frame",nil,UIParent)
 	m_zone:CreatePanel("Default", 0, 20, "TOPLEFT", Minimap, "TOPLEFT", 2,-2)
 	m_zone:SetFrameLevel(5)
