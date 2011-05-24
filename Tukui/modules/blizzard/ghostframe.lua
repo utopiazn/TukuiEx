@@ -1,11 +1,11 @@
 ﻿local T, C, L = unpack(select(2, ...)) -- Import: T - functions, constants, variables; C - config; L - locales
 -- GhostFrame at top
-SkinButton(GhostFrame)
+GhostFrame:SetTemplate("Default")
 GhostFrame:SetBackdropColor(0,0,0,0)
 GhostFrame:SetBackdropBorderColor(0,0,0,0)
 GhostFrame.SetBackdropColor = T.dummy
 GhostFrame.SetBackdropBorderColor = T.dummy
-SkinButton(GhostFrameContentsFrame)
+GhostFrameContentsFrame:SetTemplate("Default")
 GhostFrameContentsFrame:CreateShadow()
 GhostFrameContentsFrameIcon:SetTexture(nil)
 GhostFrameContentsFrame:Width(148)
@@ -17,4 +17,7 @@ GhostFrame:SetFrameLevel(10)
 GhostFrame:ClearAllPoints()
 GhostFrame:Point("TOP", UIParent, 0, 26)
 GhostFrameContentsFrameText:ClearAllPoints()
+if T.client == "koKR" then
+	GhostFrameContentsFrameText:SetText("무덤으로 돌아가기") -- fix for korean WoW client
+end
 GhostFrameContentsFrameText:Point("BOTTOM", 0, 5)
