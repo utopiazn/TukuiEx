@@ -4246,7 +4246,6 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 					local icon = _G["SpellButton"..i.."IconTexture"]
 					
 					if first then
-						--button:StripTextures()
 						for i=1, button:GetNumRegions() do
 							local region = select(i, button:GetRegions())
 							if region:GetObjectType() == "Texture" then
