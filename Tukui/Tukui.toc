@@ -4,7 +4,7 @@
 ## Editor: 달빛야수 @ Ragnaros (KR)
 ## Credits to: Caith, Caellian, Shestak, Haste, Tekkub, Alza, Roth, P3lim, Tulla, Hungtar, hankthetank, Ishtara, Haleth and others...
 ## Special Thanks to: Admins, Moderator and VIP's from tukui.org
-## Version: 13.13.109
+## Version: 13.13.122
 ## Title: |cffC495DDTukui|r |cffff8000Extended Edition|r
 ## Notes: UI of awesomeness!
 ## Notes-koKR: 환상적인 UI입니다!
