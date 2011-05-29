@@ -1012,14 +1012,12 @@ T.createAuraWatch = function(self, unit)
 
 			local tex = icon:CreateTexture(nil, "OVERLAY")
 			tex:SetAllPoints(icon)
-			--[[
 			tex:SetTexture(C["media"].blank)
 			if (spell[3]) then
 				tex:SetVertexColor(unpack(spell[3]))
 			else
 				tex:SetVertexColor(0.8, 0.8, 0.8)
 			end
-			]]--
 
 			local count = icon:CreateFontString(nil, "OVERLAY")
 			count:SetFont(C["media"].uffont, 8*C["raidframes"].gridscale, "THINOUTLINE")
