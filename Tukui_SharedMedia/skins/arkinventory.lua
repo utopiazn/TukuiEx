@@ -56,34 +56,34 @@ TukuiExSkin:RegisterSkin("ArkInventory",function(Skin,skin,Layout,layout,config)
 		title:SetPoint("TOPLEFT")
 		title:SetPoint("TOPRIGHT")
 		search:ClearAllPoints()
-		search:Point("TOPLEFT",title,"BOTTOMLEFT",0,-config.buttonSpacing)
-		search:Point("TOPRIGHT",title,"BOTTOMRIGHT",0,-config.buttonSpacing)
+		search:SetPoint("TOPLEFT",title,"BOTTOMLEFT",0,-config.buttonSpacing)
+		search:SetPoint("TOPRIGHT",title,"BOTTOMRIGHT",0,-config.buttonSpacing)
 		container:ClearAllPoints()
-		container:Point("TOPLEFT",search,"BOTTOMLEFT",0,-config.buttonSpacing)
-		container:Point("TOPRIGHT",search,"BOTTOMRIGHT",0,-config.buttonSpacing)
+		container:SetPoint("TOPLEFT",search,"BOTTOMLEFT",0,-config.buttonSpacing)
+		container:SetPoint("TOPRIGHT",search,"BOTTOMRIGHT",0,-config.buttonSpacing)
 		changer:ClearAllPoints()
-		changer:Point("TOPLEFT",container,"BOTTOMLEFT",0,-config.buttonSpacing)
-		changer:Point("TOPRIGHT",container,"BOTTOMRIGHT",0,-config.buttonSpacing)
+		changer:SetPoint("TOPLEFT",container,"BOTTOMLEFT",0,-config.buttonSpacing)
+		changer:SetPoint("TOPRIGHT",container,"BOTTOMRIGHT",0,-config.buttonSpacing)
 		status:ClearAllPoints()
-		status:Point("TOPLEFT",changer,"BOTTOMLEFT",0,-config.buttonSpacing)
-		status:Point("TOPRIGHT",changer,"BOTTOMRIGHT",0,-config.buttonSpacing)
+		status:SetPoint("TOPLEFT",changer,"BOTTOMLEFT",0,-config.buttonSpacing)
+		status:SetPoint("TOPRIGHT",changer,"BOTTOMRIGHT",0,-config.buttonSpacing)
 		-- Reanchor & resize internal components
 		-- Status
 		ArkInventory.Const.Frame.Status.Height = config.fontSize + config.borderWidth * 4
-		_G[status:GetName().."EmptyText"]:Point("LEFT",config.borderWidth,0)
+		_G[status:GetName().."EmptyText"]:SetPoint("LEFT",config.borderWidth,0)
 		_G[status:GetName().."EmptyText"]:SetFont(config.font,config.fontSize,config.fontFlags)
 		-- Restructure the gold display
-		_G[status:GetName().."GoldCopperButton"]:Point("RIGHT",-config.borderWidth,0)
+		_G[status:GetName().."GoldCopperButton"]:SetPoint("RIGHT",-config.borderWidth,0)
 		_G[status:GetName().."GoldCopperButtonText"]:SetFont(config.font,config.fontSize,config.fontFlags)
-		--_G[status:GetName().."GoldCopperButtonText"]:Point("RIGHT",-13,1)
+		--_G[status:GetName().."GoldCopperButtonText"]:SetPoint("RIGHT",-13,1)
 		
-		_G[status:GetName().."GoldSilverButton"]:Point("RIGHT",_G[status:GetName().."GoldCopperButtonText"],"LEFT",-config.borderWidth,0)
+		_G[status:GetName().."GoldSilverButton"]:SetPoint("RIGHT",_G[status:GetName().."GoldCopperButtonText"],"LEFT",-config.borderWidth,0)
 		_G[status:GetName().."GoldSilverButtonText"]:SetFont(config.font,config.fontSize,config.fontFlags)
-		--_G[status:GetName().."GoldSilverButtonText"]:Point("RIGHT",-13,1)
+		--_G[status:GetName().."GoldSilverButtonText"]:SetPoint("RIGHT",-13,1)
 		
-		_G[status:GetName().."GoldGoldButton"]:Point("RIGHT",_G[status:GetName().."GoldSilverButtonText"],"LEFT",-config.borderWidth,0)
+		_G[status:GetName().."GoldGoldButton"]:SetPoint("RIGHT",_G[status:GetName().."GoldSilverButtonText"],"LEFT",-config.borderWidth,0)
 		_G[status:GetName().."GoldGoldButtonText"]:SetFont(config.font,config.fontSize,config.fontFlags)
-		--_G[status:GetName().."GoldSilverButtonText"]:Point("RIGHT",-13,1)
+		--_G[status:GetName().."GoldSilverButtonText"]:SetPoint("RIGHT",-13,1)
 		
 	end
 	
@@ -121,8 +121,8 @@ TukuiExSkin:RegisterSkin("ArkInventory",function(Skin,skin,Layout,layout,config)
 			obj:SetTexCoord(unpack(config.buttonZoom))
 			obj:SetVertexColor(r or 1, r and g or 1, r and b or 1)
 			obj:ClearAllPoints()
-			obj:Point("TOPLEFT",config.borderWidth,-config.borderWidth)
-			obj:Point("BOTTOMRIGHT",-config.borderWidth,config.borderWidth)
+			obj:SetPoint("TOPLEFT",config.borderWidth,-config.borderWidth)
+			obj:SetPoint("BOTTOMRIGHT",-config.borderWidth,config.borderWidth)
 		end
 	end
 	

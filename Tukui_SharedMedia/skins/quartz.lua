@@ -12,8 +12,8 @@ TukuiExSkin:RegisterSkin("Quartz",function(Skin, skin, Layout, layout, config)
 			-- Can't skin a texture, so we create a frame for this
 			bar.IconBorder = CreateFrame("Frame",nil,bar)
 			self:SkinFrame(bar.IconBorder)
-			bar.IconBorder:Point("TOPLEFT",bar.Icon,"TOPLEFT",-config.borderWidth,config.borderWidth)
-			bar.IconBorder:Point("BOTTOMRIGHT",bar.Icon,"BOTTOMRIGHT",config.borderWidth,-config.borderWidth)
+			bar.IconBorder:SetPoint("TOPLEFT",bar.Icon,"TOPLEFT",-config.borderWidth,config.borderWidth)
+			bar.IconBorder:SetPoint("BOTTOMRIGHT",bar.Icon,"BOTTOMRIGHT",config.borderWidth,-config.borderWidth)
 			bar.IconBorder:SetFrameStrata("LOW")
 		end
 		if bar.config.hideicon then
@@ -36,8 +36,8 @@ TukuiExSkin:RegisterSkin("Quartz",function(Skin, skin, Layout, layout, config)
 	template.ApplySettings_ = template.ApplySettings
 	template.ApplySettings = function (self)
 		self:ApplySettings_()
-		self:Width(self.config.w + config.borderWidth * 2)
-		self:Height(self.config.h + config.borderWidth * 2)
+		self:SetWidth(self.config.w + config.borderWidth * 2)
+		self:SetHeight(self.config.h + config.borderWidth * 2)
 		
 		skin:SkinQuartzBar(self)
 		

@@ -79,9 +79,9 @@ TukuiExSkin:RegisterSkin("Skada",function(Skin,skin,Layout,layout,config)
 		if win.bargroup.bgframe then
 			skin:SkinFrame(win.bargroup.bgframe)
 			if win.db.reversegrowth then
-				win.bargroup.bgframe:Point("BOTTOM", win.bargroup.button, "BOTTOM", 0, -1 * (win.db.enabletitle and 2 or 1))
+				win.bargroup.bgframe:SetPoint("BOTTOM", win.bargroup.button, "BOTTOM", 0, -1 * (win.db.enabletitle and 2 or 1))
 			else
-				win.bargroup.bgframe:Point("TOP", win.bargroup.button, "TOP", 0,1 * (win.db.enabletitle and 2 or 1))
+				win.bargroup.bgframe:SetPoint("TOP", win.bargroup.button, "TOP", 0,1 * (win.db.enabletitle and 2 or 1))
 			end
 		end
 		self:AdjustBackgroundHeight(win)

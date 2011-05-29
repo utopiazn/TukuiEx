@@ -30,7 +30,7 @@ TukuiExSkin:RegisterSkin("Omen",function(Skin, skin, Layout, layout, config)
 		Omen.db.profile.TitleBar.UseSameBG = true
 		self:UpdateTitleBar_()
 		self.TitleText:SetFont(config.font,self.db.profile.TitleBar.FontSize)
-		self.BarList:Point("TOPLEFT", self.Title, "BOTTOMLEFT",0,-1)
+		self.BarList:SetPoint("TOPLEFT", self.Title, "BOTTOMLEFT",0,-1)
 	end
 	--Skin Title/Bars backgrounds
 	Omen.UpdateBackdrop_ = Omen.UpdateBackdrop
@@ -41,7 +41,7 @@ TukuiExSkin:RegisterSkin("Omen",function(Skin, skin, Layout, layout, config)
 		self:UpdateBackdrop_()
 		skin:SkinFrame(self.BarList)
 		skin:SkinFrame(self.Title)
-		self.BarList:Point("TOPLEFT", self.Title, "BOTTOMLEFT",0,-1)
+		self.BarList:SetPoint("TOPLEFT", self.Title, "BOTTOMLEFT",0,-1)
 	end
 	-- Hook bar creation to apply settings
 	local omen_mt = getmetatable(Omen.Bars)
