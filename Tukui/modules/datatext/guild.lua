@@ -143,6 +143,7 @@ end)
 Stat:SetScript("OnEnter", function(self)
 	if InCombatLockdown() or not IsInGuild() then return end
 	
+	GuildRoster()
 	UpdateGuildMessage()
 	BuildGuildTable()
 		
