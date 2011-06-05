@@ -3599,12 +3599,63 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 			hooksecurefunc("WorldMap_ToggleSizeUp", FixSkin)
 			
 			WorldMapFrame:RegisterEvent("PLAYER_LOGIN")
+			WorldMapFrame:RegisterEvent("PLAYER_REGEN_ENABLED") -- fix taint with small map & big map
+			WorldMapFrame:RegisterEvent("PLAYER_REGEN_DISABLED") -- fix taint with small map & big map
 			WorldMapFrame:HookScript("OnEvent", function(self, event)
 				if event == "PLAYER_LOGIN" then
 					if not GetCVarBool("miniWorldMap") then
 						ToggleFrame(WorldMapFrame)
 						ToggleFrame(WorldMapFrame)
 					end
+				elseif event == "PLAYER_REGEN_DISABLED" then
+					HideUIPanel(WorldMapFrame)
+					
+					if not miniWorldMap and WatchFrame.showObjectives then
+						WorldMapFrame_SetFullMapView()
+					end
+				
+					WorldMapFrameSizeDownButton:Disable()
+					WorldMapFrameSizeUpButton:Disable()
+					
+					HideUIPanel(WorldMapFrame)
+					WatchFrame.showObjectives = nil
+					WorldMapQuestShowObjectives:SetChecked(false)
+					WorldMapTitleButton:Hide()
+					WorldMapBlobFrame:Hide()
+					WorldMapPOIFrame:Hide()
+
+					WorldMapQuestShowObjectives.Show = T.dummy
+					WorldMapTitleButton.Show = T.dummy
+					WorldMapBlobFrame.Show = T.dummy
+					WorldMapPOIFrame.Show = T.dummy       
+
+					WatchFrame_Update()
+					
+					WorldMapQuestShowObjectives:Hide()
+				elseif event == "PLAYER_REGEN_ENABLED" then
+					WorldMapFrameSizeDownButton:Enable()
+					WorldMapFrameSizeUpButton:Enable()
+					
+					WorldMapQuestShowObjectives.Show = WorldMapQuestShowObjectives:Show()
+					WorldMapTitleButton.Show = WorldMapTitleButton:Show()
+					WorldMapBlobFrame.Show = WorldMapBlobFrame:Show()
+					WorldMapPOIFrame.Show = WorldMapPOIFrame:Show()
+
+					WorldMapTitleButton:Show()
+
+					WatchFrame.showObjectives = true
+					WorldMapQuestShowObjectives:SetChecked(true)
+					
+					if not miniWorldMap and WatchFrame.showObjectives then
+						WorldMapFrame_SetQuestMapView()
+					end
+
+					WorldMapBlobFrame:Show()
+					WorldMapPOIFrame:Show()
+
+					WatchFrame_Update()
+					
+					WorldMapQuestShowObjectives:Show()
 				end
 			end)
 			
@@ -3622,15 +3673,6 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 			local int = 0
 			
 			WorldMapFrame:HookScript("OnUpdate", function(self, elapsed)
-				--For some reason these buttons aren't functioning correctly, and we can't afford for it to fuckup because toggling to a big map in combat will cause a taint.
-				if InCombatLockdown() then
-					WorldMapFrameSizeDownButton:Disable()
-					WorldMapFrameSizeUpButton:Disable()
-				else
-					WorldMapFrameSizeDownButton:Enable()
-					WorldMapFrameSizeUpButton:Enable()			
-				end
-				
 				if WORLDMAP_SETTINGS.size == WORLDMAP_FULLMAP_SIZE then
 					WorldMapFrameSizeUpButton:Hide()
 					WorldMapFrameSizeDownButton:Show()
@@ -3674,7 +3716,11 @@ TukuiSkin:SetScript("OnEvent", function(self, event, addon)
 					
 					int = 0
 				end				
-			end)		
+			end)
+
+			-- dropdown on full map is scaled incorrectly
+			WorldMapContinentDropDownButton:HookScript("OnClick", function() DropDownList1:SetScale(C.general.uiscale) end)
+			WorldMapZoneDropDownButton:HookScript("OnClick", function() DropDownList1:SetScale(C.general.uiscale) end)
 		end
 		
 		--Item Text Frame
