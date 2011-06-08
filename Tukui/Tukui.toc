@@ -1,4 +1,4 @@
-﻿## Interface: 40100
+﻿## Interface: 40200
 ## Author: Tukz
 ## Project Collaborators: Elv22, Nightcracker
 ## Editor: 달빛야수 @ Ragnaros (KR)

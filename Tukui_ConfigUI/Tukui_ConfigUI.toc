@@ -1,4 +1,4 @@
-﻿## Interface: 40100
+﻿## Interface: 40200
 ## Title: |cffC495DDTukui|r Config UI
 ## Title-koKR: |cffC495DDTukui|r 설정 인터페이스
 ## Notes: Someday there is only pantesaur left.
