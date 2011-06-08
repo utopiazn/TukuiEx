@@ -11,6 +11,6 @@ T.getscreenwidth = tonumber(string.match(({GetScreenResolutions()})[GetCurrentRe
 T.version = GetAddOnMetadata("Tukui", "Version")
 T.versionnumber = tonumber(T.version)
 T.incombat = UnitAffectingCombat("player")
-T.patch = GetBuildInfo()
+T.patch, T.build, T.releasedate, T.toc = GetBuildInfo()
 T.level = UnitLevel("player")
 T.myrealm = GetRealmName()

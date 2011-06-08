@@ -212,7 +212,7 @@ local menuList = {
 		Calendar_Toggle()
 	end},
 	{text = ENCOUNTER_JOURNAL,
-	func = function() if T.IsPTRVersion() then ToggleFrame(EncounterJournal) end end}, 
+	func = function() if T.toc >= 40200 then ToggleFrame(EncounterJournal) end end}, 
 }
 
 Minimap:SetScript("OnMouseUp", function(self, btn)
