@@ -84,6 +84,9 @@ TukuiExSkin:RegisterSkin("Skada",function(Skin,skin,Layout,layout,config)
 				win.bargroup.bgframe:SetPoint("TOP", win.bargroup.button, "TOP", 0,1 * (win.db.enabletitle and 2 or 1))
 			end
 		end
+		win.bargroup:SetFrameStrata("MEDIUM")
+		win.bargroup.bgframe:SetFrameStrata("MEDIUM")
+		win.bargroup.bgframe:SetFrameLevel(1)
 		self:AdjustBackgroundHeight(win)
 		win.bargroup:SetMaxBars(win.db.barmax)
 		win.bargroup:SortBars()
