@@ -41,6 +41,9 @@ local function LoadSkin()
 		"ChannelFrameDaughterFrame",
 		"AddFriendFrame",
 		"AddFriendNoteFrame",
+		"FriendsFriendsFrame",
+		"FriendsFriendsList",
+		"FriendsFriendsNoteFrame",
 	}			
 
 	local KillTextures = {
@@ -82,6 +85,8 @@ local function LoadSkin()
 		"AddFriendEntryFrameAcceptButton",
 		"AddFriendEntryFrameCancelButton",
 		"AddFriendInfoFrameContinueButton",
+		"FriendsFriendsSendRequestButton",
+		"FriendsFriendsCloseButton",
 	}			
 
 	for _, button in pairs(buttons) do
@@ -161,6 +166,13 @@ local function LoadSkin()
 		end
 	end
 	hooksecurefunc("ChannelList_Update", Channel)
+	
+	--View Friends BN Frame
+	FriendsFriendsFrame:CreateBackdrop("Default")
+
+	T.SkinEditBox(FriendsFriendsList)
+	T.SkinEditBox(FriendsFriendsNoteFrame)
+	T.SkinDropDownBox(FriendsFriendsFrameDropDown,150)
 end
 
 tinsert(T.SkinFuncs["Tukui"], LoadSkin)

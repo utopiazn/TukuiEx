@@ -5,18 +5,13 @@ T.SkinFuncs["Tukui"] = {}
 
 function T.SetModifiedBackdrop(self)
 	local color = RAID_CLASS_COLORS[T.myclass]
-	local r, g, b = unpack(C["media"].backdropcolor)
-	self:SetBackdropColor(r*0.9, g*0.9, b*0.9)
+	self:SetBackdropColor(color.r*.15, color.g*.15, color.b*.15)
 	self:SetBackdropBorderColor(color.r, color.g, color.b)
 end
 
 function T.SetOriginalBackdrop(self)
-	local color = RAID_CLASS_COLORS[T.myclass]
-	if C["general"].classcolortheme == true then
-		self:SetBackdropBorderColor(color.r, color.g, color.b)
-	else
-		self:SetTemplate("Default")
-	end
+	self:SetBackdropColor(unpack(C["media"].backdropcolor))
+	self:SetBackdropBorderColor(unpack(C["media"].bordercolor))
 end
 
 function T.SkinButton(f, strip)
@@ -228,10 +223,4 @@ LoadBlizzardSkin:SetScript("OnEvent", function(self, event, addon)
 			end
 		end
 	end
-end)
-
-local TukuiSkin = CreateFrame("Frame")
-TukuiSkin:RegisterEvent("ADDON_LOADED")
-TukuiSkin:SetScript("OnEvent", function(self, event, addon)
-
 end)
