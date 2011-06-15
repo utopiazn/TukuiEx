@@ -304,8 +304,11 @@ local function LoadSkin()
 		end
 	end
 	
+	-- execute item coloring everytime we open character frame
+	CharacterFrame:HookScript("OnShow", ColorItemBorder)
+	
+	-- execute item coloring everytime an item is changed
 	local CheckItemBorderColor = CreateFrame("Frame")
-	CheckItemBorderColor:RegisterEvent("PLAYER_ENTERING_WORLD")
 	CheckItemBorderColor:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
 	CheckItemBorderColor:SetScript("OnEvent", ColorItemBorder)
 end
