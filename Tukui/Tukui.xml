@@ -104,6 +104,7 @@
 	<Script file="modules\tooltip\tooltip.lua"/>
 	<Script file="modules\nameplates\nameplates.lua"/>
 	<Script file="modules\bags\bags.lua"/>
+	<Script file="modules\bags\bagbar.lua"/>
 	<Script file="modules\loot\lootframe.lua"/>
 	<Script file="modules\loot\rollframe.lua"/>
 	<Script file="modules\maps\zonemap.lua"/>
@@ -117,6 +118,7 @@
 	<Script file="modules\misc\threatbar.lua"/>
 	<Script file="modules\misc\raidmarker.lua"/>
 	<Script file="modules\blizzard\achievements.lua"/>
+	<Script file="modules\blizzard\colorpicker.lua"/>
 	<Script file="core\movers.lua"/>
 	<Script file="modules\misc\raidutilities.lua"/>
 	<Script file="modules\skins\core.lua"/>
@@ -124,6 +126,7 @@
 	<Script file="modules\skins\achievementpopup.lua"/>
 	<Script file="modules\skins\archeology.lua"/>
 	<Script file="modules\skins\auction.lua"/>
+	<Script file="modules\skins\bags.lua"/>
 	<Script file="modules\skins\barbershop.lua"/>
 	<Script file="modules\skins\bgscore.lua"/>
 	<Script file="modules\skins\binding.lua"/>
@@ -131,7 +134,6 @@
 	<Script file="modules\skins\calendar.lua"/>
 	<Script file="modules\skins\character.lua"/>
 	<Script file="modules\skins\chat.lua"/>
-	<Script file="modules\skins\colorpicker.lua"/>
 	<Script file="modules\skins\debugtools.lua"/>
 	<Script file="modules\skins\dressup.lua"/>
 	<Script file="modules\skins\friends.lua"/>

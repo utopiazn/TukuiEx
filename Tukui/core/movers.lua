@@ -17,6 +17,7 @@ T.MoverFrames = {
 	TukuiTargetCastBarAnchor,
 	TukuiFocusCastBarAnchor,
 	TukuiFocusTargetCastBarAnchor,
+	TukuiBagBarAnchor,
 }
 
 -- used to exec various code if we enable or disable moving

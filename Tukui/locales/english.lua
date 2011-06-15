@@ -221,6 +221,7 @@ L.move_playercastbar = "Move Player Castbar"
 L.move_targetcastbar = "Move Target Castbar"
 L.move_focuscastbar = "Move Focus Castbar"
 L.move_focustargetcastbar = "Move Focustarget Castbar"
+L.move_bag = "Move Bag"
 
 -------------------------------------------------
 -- INSTALLATION

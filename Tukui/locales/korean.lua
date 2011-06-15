@@ -221,6 +221,7 @@ if T.client == "koKR" then
 	L.move_targetcastbar = "대상 시전바"
 	L.move_focuscastbar = "주시대상 시전바"
 	L.move_focustargetcastbar = "주시대상의 대상 시전바"
+	L.move_bag = "가방"
 	
 	-- tuto/install
 	L.install_header_1 = "환영합니다"
