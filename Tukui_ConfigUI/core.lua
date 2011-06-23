@@ -41,6 +41,7 @@ local function Local(o)
 	if o == "TukuiConfigUIgeneralclasscolor" then o = TukuiL.option_general_classcolor end
 	if o == "TukuiConfigUIgeneralbackdropcolor" then o = TukuiL.option_general_backdropcolor end
 	if o == "TukuiConfigUIgeneralbordercolor" then o = TukuiL.option_general_bordercolor end
+	if o == "TukuiConfigUIgeneralblizzardreskin" then o = TukuiL.option_general_blizzardreskin end
 	
 	-- media
 	if o == "TukuiConfigUImedia" then o = TukuiL.option_media end

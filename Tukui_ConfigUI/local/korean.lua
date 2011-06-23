@@ -13,6 +13,7 @@
 	TukuiL.option_general_classcolor = "직업 색상 사용"
 	TukuiL.option_general_backdropcolor = "기본 배경 색상"
 	TukuiL.option_general_bordercolor = "기본 선 색상"
+	TukuiL.option_general_blizzardreskin = "블리자드 인터페이스 스킨"
 	
 	-- media
 	TukuiL.option_media = "미디어"

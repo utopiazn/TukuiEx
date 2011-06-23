@@ -9,6 +9,7 @@ C["general"] = {
 	["classcolor"] = true,                              -- enable classcolor theme
 	["backdropcolor"] = { .1,.1,.1 },                   -- default backdrop color of panels
 	["bordercolor"] = { .6,.6,.6 },                     -- default border color of panels
+	["blizzardreskin"] = true                           -- reskin all Blizzard frames
 }
 
 C["unitframes"] = {

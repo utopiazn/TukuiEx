@@ -1,5 +1,7 @@
 local T, C, L = unpack(select(2, ...)) -- Import Functions/Constants, Config, Locales
 
+if not C["general"].blizzardreskin then return end
+
 T.SkinFuncs = {}
 T.SkinFuncs["Tukui"] = {}
 
@@ -204,7 +206,10 @@ end
 local LoadBlizzardSkin = CreateFrame("Frame")
 LoadBlizzardSkin:RegisterEvent("ADDON_LOADED")
 LoadBlizzardSkin:SetScript("OnEvent", function(self, event, addon)
-	if IsAddOnLoaded("Skinner") or IsAddOnLoaded("Aurora") then return end
+	if IsAddOnLoaded("Skinner") or IsAddOnLoaded("Aurora") or not C["general"].blizzardreskin then
+		self:UnregisterEvent("ADDON_LOADED")
+		return 
+	end
 	
 	for _addon, skinfunc in pairs(T.SkinFuncs) do
 		if type(skinfunc) == "function" then

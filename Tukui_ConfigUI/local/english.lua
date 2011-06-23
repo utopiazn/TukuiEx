@@ -13,6 +13,7 @@ TukuiL.option_general_customuiscale = "UI Scale (if auto-scale is disabled)"
 TukuiL.option_general_classcolor = "Class Color Theme"
 TukuiL.option_general_backdropcolor = "Set default backdrop color of panels"
 TukuiL.option_general_bordercolor = "Set default border color of panels"
+TukuiL.option_general_blizzardreskin = "Reskin Blizzard frames to match Tukui"
 
 -- media
 TukuiL.option_media = "Media"
