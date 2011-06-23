@@ -195,7 +195,6 @@ C["panels"] = {
 	["bottompanel"] = true,                             -- enable bottom panel
 	["toppanel"] = true,                                -- enable top panel
 	["location"] = true,                                -- enable location panel
-	["blizzardskins"] = true,                           -- enable blizz skin
 }
 
 C["misc"] = {

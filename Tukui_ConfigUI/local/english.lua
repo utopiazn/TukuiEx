@@ -215,7 +215,6 @@ TukuiL.option_panels_infowidth = "Info frame width"
 TukuiL.option_panels_bottompanel = "Enable Bottombar"
 TukuiL.option_panels_toppanel = "Enable Topbar"
 TukuiL.option_panels_location = "Enable location panel"
-TukuiL.option_panels_blizzardskins = "Enable Blizzard UI skin"
 
 -- misc
 TukuiL.option_misc = "Misc"

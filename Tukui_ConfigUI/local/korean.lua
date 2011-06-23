@@ -215,7 +215,6 @@
 	TukuiL.option_panels_bottompanel = "하단 배경창"
 	TukuiL.option_panels_toppanel = "상단 배경창"
 	TukuiL.option_panels_location = "상단 지역정보창"
-	TukuiL.option_panels_blizzardskins = "블리자드 인터페이스 스킨"
 
 	-- misc
 	TukuiL.option_misc = "기타"
