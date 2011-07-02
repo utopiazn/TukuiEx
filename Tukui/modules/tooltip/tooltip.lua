@@ -119,9 +119,8 @@ hooksecurefunc("GameTooltip_SetDefaultAnchor", function(self, parent)
 		end
 	else
 		self:SetOwner(parent, "ANCHOR_NONE")
-	end
-	
-	self:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", -111111, -111111) -- hack to update GameStatusBar instantly.
+		self:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", -111111, -111111) -- hack to update GameStatusBar instantly.
+	end	
 end)
 
 GameTooltip:HookScript("OnUpdate", function(self, ...) UpdateTooltip(self) end)
