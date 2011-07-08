@@ -1256,6 +1256,34 @@ if C["raidframes"].raidunitdebuffwatch == true then
 			--Al'Akir
 			SpellName(93260), -- Ice Storm
 			SpellName(93295), -- Lightning Rod
+			
+		--fire lands
+			--베스틸락
+			SpellName(99506), -- 과부의 입맞춤
+			SpellName(99559), -- 시선 집중
+			SpellName(97079), --사악한 침투
+			
+			--알리스라조르
+			SpellName(100721), -- 출혈이 멈추지 않는 상처
+			
+			--샤녹스
+			SpellName(101218), -- 날카로운 상처
+			SpellName(101209), -- 제물의 덫
+			SpellName(99837), -- 수정 감옥 덫
+			SpellName(100129), -- 얼굴 강타
+			
+			--발레록
+			SpellName(99252), -- 영광의 빛
+			SpellName(100230), -- 고문
+			SpellName(99489), -- 고문당함
+			
+			--판드랄
+			SpellName(98620), -- 불타는 씨앗
+			SpellName(98584), -- 불타는 보주
+			
+			--라그나로스
+			SpellName(98313), -- 마그마 작렬
+			SpellName(99145), -- 타오르는 열기
 		}
 
 		T.ReverseTimer = {
